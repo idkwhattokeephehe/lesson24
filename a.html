@@ -1,0 +1,109 @@
+<!--
+1) Start the HTML document.
+   a) Use `<!DOCTYPE html>` to define the page as an HTML5 document.
+   b) Open the `<html>` tag.
+
+2) Create the head section.
+   a) Set the page title as "My Zoo".
+   b) Add internal CSS using the `<style>` tag.
+
+3) Style the webpage.
+   a) Style the `body` with font, background, text alignment, and padding.
+   b) Style the main heading using `h1`.
+   c) Style the zoo box using the `#zoo` ID.
+   d) Style each animal zone using the `.zone` class.
+   e) Style the button with background colour, text colour, padding, border radius, and cursor.
+
+4) Create the page content.
+   a) Add the main heading "My Zoo".
+   b) Add a short instruction paragraph.
+   c) Create a zoo container using `<div id="zoo">`.
+   d) Add three animal zones using `<span>` elements with unique IDs.
+   e) Add a total animals row.
+   f) Add a button that calls `openZoo()` when clicked.
+   g) Add a paragraph to show the zoo status message.
+
+5) Add JavaScript using the `<script>` tag.
+   a) Create the `openZoo()` function.
+   b) Use `document.getElementById()` to access each zone.
+
+6) Add animals to the zoo.
+   a) Add "Lion" to Zone 1.
+   b) Add "Elephant" to Zone 2.
+   c) Add "Penguin" to Zone 3.
+   d) Show the total number of animals.
+
+7) Update the zoo design and status.
+   a) Change the zoo background colour.
+   b) Use `document.title` to get the page title.
+   c) Show a message that the zoo is now open.
+
+8) Close the `<script>`, `<body>`, and `<html>` tags to complete the webpage.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>My Zoo</title>
+   <h1>This is my zoooo muhahahahahhahahahhah</h1>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background: rgb(210, 255, 201);
+         text-align: center;
+         padding: 30px;
+      }
+
+      h1 {
+         color: #ffa59a;
+      }
+
+      #zoo {
+         border: 2px solid #ff5a43;
+         width: 300px;
+         margin: 16px auto;
+         padding: 12px;
+         border-radius: 10px;
+         background: white;
+      }
+
+      .zone {
+         border: 1px solid #ff5a43;
+         margin: 6px 0;
+         padding: 8px 12px;
+         border-radius: 6px;
+         text-align: left;
+      }
+
+      button {
+         background: #ff5a43;
+         color: white;
+         padding: 10px 24px;
+         border: none;
+         border-radius: 20px;
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body>
+<div id="zoo">
+   <div class="zone">Zone 1:<span id="zone1"></span></div>
+   <div class="zone">Zone 2:<span id="zone2"></span></div>
+   <div class="zone">Zone 3:<span id="zone3"></span></div>
+   <div class="zone">Zone 4:<span id="zone4"></span></div>
+   <div class="zone">Total Animals: <span id="total"></span></div>
+</div>
+<button onclick="openzoo()">OPEN ZOO!!</button>
+<script>
+   function openzoo() {
+      document.getElementById("zone1").innerHTML = "Elephant";
+      document.getElementById("zone2").innerHTML = "Lion";
+      document.getElementById("zone3").innerHTML = "me"
+      document.getElementById("zone4").innerHTML = "My classroom of X"
+      document.getElementById("total").innerHTML = 4
+      document.getElementById("zoo-status").innerHTML = document.title + " is now open!";
+   }
+</script>
+</body>
+
+</html>
